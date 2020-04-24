@@ -6,7 +6,7 @@ sudo apt install npm
 ```
 
 ```console
-balena ssh 192.168.0.10
+balena ssh 192.168.0.13
 
-balena push 192.168.0.10
+balena push 192.168.0.13
 ```

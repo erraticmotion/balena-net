@@ -22,25 +22,19 @@ balena version
 ## Connect
 
 ```
-balena ssh 192.168.0.10
-ssh -p 22222 root@192.168.0.10
+balena ssh 192.168.0.13
+ssh -p 22222 root@192.168.0.13
 ```
 
 ## Docker images for Balena
 
 ```console
-balena-engine pull balenalib/raspberry-pi-golang
-balena-engine pull balenalib/raspberrypi3-golang
-balena-engine pull balenalib/raspberrypi3-64-golang
+balena-engine pull balenalib/raspberrypi4-64-golang
 
-balena-engine pull balenalib/raspberrypi3-dotnet
-balena-engine pull balenalib/raspberrypi3-64-dotnet
-balena-engine pull balenalib/raspberrypi3-64-dotnet:3.1
-balena-engine pull balenalib/raspberrypi3-64-dotnet:3.1-sdk
-balena-engine pull balenalib/raspberrypi3-64-dotnet:3.1-build
-balena-engine pull balenalib/raspberrypi3-64-dotnet:3.1-aspnet-build
-balena-engine pull balenalib/raspberrypi3-64-dotnet:3.1-aspnet-run
-
+balena-engine pull balenalib/raspberrypi4-64-dotnet
+balena-engine pull balenalib/raspberrypi4-64-dotnet:3.1-sdk
+balena-engine pull balenalib/raspberrypi4-64-dotnet:3.1-aspnet-build
+balena-engine pull balenalib/raspberrypi4-64-dotnet:3.1-aspnet-run
 balena-engine images
 ```
 
@@ -59,16 +53,17 @@ sudo apt-get install dotnet-sdk-3.1
 ## Docker images for Balena-Net
 
 ```console
-docker pull balenalib/raspberry-pi-golang
-docker pull balenalib/raspberrypi3-golang
-docker pull balenalib/raspberrypi3-64-golang
-docker pull golang
+docker pull balenalib/raspberrypi4-64-golang
 
-docker pull balenalib/raspberrypi3-dotnet
-docker pull balenalib/raspberrypi3-64-dotnet:3.1-sdk
-docker pull balenalib/raspberrypi3-64-dotnet:3.1-aspnet-build
-docker pull balenalib/raspberrypi3-64-dotnet:3.1-aspnet-run
+docker pull balenalib/raspberrypi4-64-dotnet
+docker pull balenalib/raspberrypi4-64-dotnet:3.1-sdk
+docker pull balenalib/raspberrypi4-64-dotnet:3.1-aspnet-build
+docker pull balenalib/raspberrypi4-64-dotnet:3.1-aspnet-run
 
+docker pull mcr.microsoft.com/dotnet/core/runtime-deps
+docker pull mcr.microsoft.com/dotnet/core/runtime
+docker pull mcr.microsoft.com/dotnet/core/aspnet
+docker pull mcr.microsoft.com/dotnet/core/sdk
 docker images
 ```
 

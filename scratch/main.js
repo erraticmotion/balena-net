@@ -5,7 +5,7 @@ var app = express();
 
 // reply to request with "Hello World!"
 app.get('/', function (req, res) {
-  res.send("Hello balena-OS World.");
+  res.send("Hello balena-OS World on Rasp-Pi4.");
 });
 
 //start a server on port 80 and log its start to our console

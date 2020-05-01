@@ -1,0 +1,3 @@
+[submodule "lib/resin-image-flasher-unwrap"]
+	path = lib/resin-image-flasher-unwrap
+	url = https://github.com/balena-os/resin-image-flasher-unwrap

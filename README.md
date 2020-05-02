@@ -19,11 +19,22 @@ source ~/.bashrc
 balena version
 ```
 
-## Connect
+## Raspberry Pi4
 
-```
+```console
 balena ssh 192.168.0.13
-ssh -p 22222 root@192.168.0.13
+```
+
+## balenaFin
+
+```console
+balena ssh 192.168.0.15
+```
+
+## Intel NUC
+
+```console
+balena ssh 192.168.200.142
 ```
 
 ## Docker images for balenaOS on Pi4
@@ -32,7 +43,6 @@ ssh -p 22222 root@192.168.0.13
 balena-engine pull balenalib/raspberrypi4-64-alpine-node
 balena-engine pull balenalib/raspberrypi4-64-golang
 balena-engine pull balenalib/raspberrypi4-64-dotnet
-balena-engine pull balenalib/raspberrypi4-64-dotnet:3.1-sdk
 balena-engine pull balenalib/raspberrypi4-64-dotnet:3.1-aspnet-build
 balena-engine pull balenalib/raspberrypi4-64-dotnet:3.1-aspnet-run
 balena-engine images
@@ -44,7 +54,6 @@ balena-engine images
 balena-engine pull balenalib/fincm3-alpine-node
 balena-engine pull balenalib/fincm3-golang
 balena-engine pull balenalib/fincm3-dotnet
-balena-engine pull balenalib/fincm3-dotnet:3.1-build
 balena-engine pull balenalib/fincm3-dotnet:3.1-aspnet-build
 balena-engine pull balenalib/fincm3-dotnet:3.1-aspnet-run
 balena-engine images
@@ -56,7 +65,6 @@ balena-engine images
 balena-engine pull balenalib/amd64-alpine-node
 balena-engine pull balenalib/amd64-golang
 balena-engine pull balenalib/amd64-dotnet
-balena-engine pull balenalib/amd64-dotnet:3.1-sdk
 balena-engine pull balenalib/amd64-dotnet:3.1-aspnet-build
 balena-engine pull balenalib/amd64-dotnet:3.1-aspnet-run
 balena-engine images
@@ -80,7 +88,6 @@ sudo apt-get install dotnet-sdk-3.1
 docker pull balenalib/amd64-alpine-node
 docker pull balenalib/amd64-golang
 docker pull balenalib/amd64-dotnet
-docker pull balenalib/amd64-dotnet:3.1-sdk
 docker pull balenalib/amd64-dotnet:3.1-aspnet-build
 docker pull balenalib/amd64-dotnet:3.1-aspnet-run
 

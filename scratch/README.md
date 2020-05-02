@@ -8,24 +8,30 @@ sudo apt install npm
 
 ## Raspberry Pi4
 
-```console
-balena ssh 192.168.0.13
+```text
+FROM balenalib/raspberrypi4-64-alpine-node
+```
 
+```console
 balena push 192.168.0.13
 ```
 
 ## balenaFin
 
-```console
-balena ssh 192.168.0.15
+```text
+FROM balenalib/fincm3-alpine-node
+```
 
+```console
 balena push 192.168.0.15
 ```
 
 ## Intel NUC
 
-```console
-balena ssh 192.168.200.142
+```text
+FROM balenalib/amd64-alpine-node
+```
 
+```console
 balena push 192.168.200.142
 ```

@@ -61,23 +61,10 @@ Power on the VM, it will boot, copy the contents of the virtual pen drive, then 
 balena ssh 192.168.200.140
 ```
 
-## Docker images for balenaOS on Intel NUC
-
-```console
-balenalib/amd64-alpine-node
-balenalib/amd64-dotnet
-balenalib/amd64-dotnet:3.1-aspnet-build
-balenalib/amd64-dotnet:3.1-aspnet-run
-balenalib/amd64-dotnet:3.1-sdk
-balenalib/amd64-dotnet:3.1-build
-```
-
 ## Intel NUC balena OS from Windows
 To get command line access from Windows, open command prompt and connect direclty to the balenaOS to bypass VM.
 ```console
 ssh -p 22222 root@192.168.200.140
-
-balena-engine images
 ```
 
 [balena-nuc]: (https://www.balena.io/os/)

@@ -60,13 +60,13 @@ source ~/.bashrc
 balena version
 ```
 
-## balenaOS
-```console
-balena ssh 192.168.200.140
-```
+## Docker images for balenaOS on Intel NUC
 
-## balenaOS from Windows
-To get command line access from Windows, open command prompt and connect direclty to the balenaOS to bypass VM.
 ```console
-ssh -p 22222 root@192.168.200.140
+docker pull balenalib/amd64-alpine-node
+docker pull balenalib/amd64-dotnet
+docker pull balenalib/amd64-dotnet:3.1-aspnet-build
+docker pull balenalib/amd64-dotnet:3.1-aspnet-run
+docker pull balenalib/amd64-dotnet:3.1-sdk
+docker pull balenalib/amd64-dotnet:3.1-build
 ```

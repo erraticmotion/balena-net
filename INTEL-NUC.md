@@ -1,6 +1,10 @@
 # INTEL NUC
 
-Run the [Intel NUC belenaOS][balena-nuc] as a VM.
+Run the [Intel NUC belenaOS][balena-nuc] as a VM and deploy to ESXi v7. 
+
+Monitor using the [Balena Cloud Dashboard][dashboard]
+
+Push Docker images using an Ubuntu 18.04 VM as a build and integration server.
 
 ## Install 
 ```console
@@ -60,13 +64,12 @@ balena ssh 192.168.200.140
 ## Docker images for balenaOS on Intel NUC
 
 ```console
-balena-engine pull balenalib/amd64-alpine-node
-balena-engine pull balenalib/amd64-dotnet
-balena-engine pull balenalib/amd64-dotnet:3.1-aspnet-build
-balena-engine pull balenalib/amd64-dotnet:3.1-aspnet-run
-balena-engine pull balenalib/amd64-dotnet:3.1-sdk
-balena-engine pull balenalib/amd64-dotnet:3.1-build
-balena-engine images
+balenalib/amd64-alpine-node
+balenalib/amd64-dotnet
+balenalib/amd64-dotnet:3.1-aspnet-build
+balenalib/amd64-dotnet:3.1-aspnet-run
+balenalib/amd64-dotnet:3.1-sdk
+balenalib/amd64-dotnet:3.1-build
 ```
 
 ## Intel NUC balena OS from Windows

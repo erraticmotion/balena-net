@@ -26,30 +26,18 @@ balena version
 ## balenaOS
 Running raspberry Pi4 image off the balena could account (@orange.fr).
 ```console
-balena ssh 192.168.0.8
+balena ssh 192.168.200.140
 ```
 
 ## balenaOS from Windows
 To get command line access from Windows, open command prompt and connect direclty to the balenaOS to bypass VM.
 ```console
-ssh -p 22222 root@192.168.200.8
+ssh -p 22222 root@192.168.200.140
 ```
 
-## Docker images for balenaOS on RPi 4
+
+
+## Docker images for balenaOS on intel Nuc
 ```console
-balena-engine pull balenalib/raspberrypi4-64-alpine-node
+balena-engine pull balenalib/amd64-alpine-node
 ```
-
-## Docker images for balenaFin compute module
-
-```console
-balena-engine pull balenalib/fincm3-alpine-node
-balena-engine pull balenalib/fincm3-golang
-balena-engine pull balenalib/fincm3-dotnet
-balena-engine pull balenalib/fincm3-dotnet:3.1-aspnet-build
-balena-engine pull balenalib/fincm3-dotnet:3.1-aspnet-run
-balena-engine pull balenalib/fincm3-dotnet:3.1-build
-balena-engine images
-```
-
-

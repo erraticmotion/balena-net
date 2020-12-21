@@ -32,7 +32,7 @@ balena ssh 192.168.0.8
 ## balenaOS from Windows
 To get command line access from Windows, open command prompt and connect direclty to the balenaOS to bypass VM.
 ```console
-ssh -p 22222 root@192.168.0.8
+ssh -p 22222 root@192.168.200.8
 ```
 
 ## Docker images for balenaOS on RPi 4

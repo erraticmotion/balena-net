@@ -67,6 +67,4 @@ docker pull balenalib/amd64-alpine-node
 docker pull balenalib/amd64-dotnet
 docker pull balenalib/amd64-dotnet:3.1-aspnet-build
 docker pull balenalib/amd64-dotnet:3.1-aspnet-run
-docker pull balenalib/amd64-dotnet:3.1-sdk
-docker pull balenalib/amd64-dotnet:3.1-build
 ```

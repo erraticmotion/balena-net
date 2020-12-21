@@ -1,5 +1,9 @@
 # Balena-Net
 
+Note: For quicker builds and without the need for a BalenaFin module, see [Intel NUC](INTEL-NUC.md)
+
+Install and run the balena CLI on a Ubuntu VM to isolate from Windows host machine. 
+
 ## Balena CLI
 
 ```console
@@ -19,33 +23,21 @@ source ~/.bashrc
 balena version
 ```
 
-## Raspberry Pi4
-
+## balenaOS
+Running raspberry Pi4 image off the balena could account (@orange.fr).
 ```console
-balena ssh 192.168.0.13
+balena ssh 192.168.0.8
 ```
 
-## balenaFin
-
+## balenaOS from Windows
+To get command line access from Windows, open command prompt and connect direclty to the balenaOS to bypass VM.
 ```console
-balena ssh 192.168.0.15
+ssh -p 22222 root@192.168.0.8
 ```
 
-## Intel NUC
-
-```console
-balena ssh 192.168.200.142
-```
-
-## Docker images for balenaOS on Pi4
-
+## Docker images for balenaOS on RPi 4
 ```console
 balena-engine pull balenalib/raspberrypi4-64-alpine-node
-balena-engine pull balenalib/raspberrypi4-64-golang
-balena-engine pull balenalib/raspberrypi4-64-dotnet
-balena-engine pull balenalib/raspberrypi4-64-dotnet:3.1-aspnet-build
-balena-engine pull balenalib/raspberrypi4-64-dotnet:3.1-aspnet-run
-balena-engine images
 ```
 
 ## Docker images for balenaFin compute module
@@ -56,73 +48,8 @@ balena-engine pull balenalib/fincm3-golang
 balena-engine pull balenalib/fincm3-dotnet
 balena-engine pull balenalib/fincm3-dotnet:3.1-aspnet-build
 balena-engine pull balenalib/fincm3-dotnet:3.1-aspnet-run
+balena-engine pull balenalib/fincm3-dotnet:3.1-build
 balena-engine images
 ```
 
-## Docker images for balenaOS on intel NUC
 
-```console
-balena-engine pull balenalib/amd64-alpine-node
-balena-engine pull balenalib/amd64-golang
-balena-engine pull balenalib/amd64-dotnet
-balena-engine pull balenalib/amd64-dotnet:3.1-aspnet-build
-balena-engine pull balenalib/amd64-dotnet:3.1-aspnet-run
-balena-engine images
-```
-
-## Dotnet Core on Ubuntu 18.04
-
-```console
-wget https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
-sudo dpkg -i packages-microsoft-prod.deb
-sudo add-apt-repository universe
-sudo apt-get update
-sudo apt-get install apt-transport-https
-sudo apt-get update
-sudo apt-get install dotnet-sdk-3.1
-```
-
-## Docker images for Balena-Net
-
-```console
-docker pull balenalib/amd64-alpine-node
-docker pull balenalib/amd64-golang
-docker pull balenalib/amd64-dotnet
-docker pull balenalib/amd64-dotnet:3.1-aspnet-build
-docker pull balenalib/amd64-dotnet:3.1-aspnet-run
-
-docker pull mcr.microsoft.com/dotnet/core/runtime-deps
-docker pull mcr.microsoft.com/dotnet/core/runtime
-docker pull mcr.microsoft.com/dotnet/core/aspnet
-docker pull mcr.microsoft.com/dotnet/core/sdk
-docker images
-```
-
-## Install Go
-
-```console
-export GO_VERSION=1.13.6
-curl -sfLo go$GO_VERSION.linux-amd64.tar.gz https://dl.google.com/go/go$GO_VERSION.linux-amd64.tar.gz
-sudo tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
-
-nano ~/.profile
---add the following line to the bottom of the file
-export PATH=$PATH:/usr/local/go/bin
--- save and exit
-source $HOME/.profile
-go version
-```
-
-## Install `direnv`
-```console
-export DE_VERSION=2.20.0
-curl -sfLo direnv https://github.com/direnv/direnv/releases/download/v$DE_VERSION/direnv.linux-amd64
-chmod +x direnv
-sudo mv direnv /usr/local/bin
-
-nano ~/.bashrc
---add the following line to the bottom of the file
-eval "$(direnv hook bash)"
--- save and exit
-exec bash
-```

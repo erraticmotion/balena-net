@@ -6,16 +6,6 @@
 sudo apt install npm
 ```
 
-## Raspberry Pi4
-
-```text
-FROM balenalib/raspberrypi4-64-alpine-node
-```
-
-```console
-balena push 192.168.0.13
-```
-
 ## balenaFin
 
 ```text

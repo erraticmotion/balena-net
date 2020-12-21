@@ -1,11 +1,43 @@
 # Balena-Net
 
-Note: For quicker builds and without the need for a BalenaFin module, see [Intel NUC](INTEL-NUC.md)
+See [Intel NUC](INTEL-NUC.md)
 
-Install and run the balena CLI on a Ubuntu VM to isolate from Windows host machine. 
+Install and run the balena CLI on a Ubuntu VM to isolate from Windows host machine. Acts as a integration and build server separate form the underlying operation system.
 
-## Docker Compose
+## Set NFS share
 ```console
+sudo apt-get install -y nfs-kernel-server
+mkdir ~/src
+sudo nano /etc/fstab
+```
+
+```text
+192.168.0.6:/nfs/Source/balena-net    /home/ubuntu/src   nfs      defaults    0       0
+```
+
+```console
+sudo mount -a
+```
+
+## Docker and Compose
+```console
+sudo apt-get update
+sudo apt-get install -y \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    gnupg-agent \
+    software-properties-common
+
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+
+sudo apt-get update
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io
+sudo usermod -aG docker $USER
+su -l $USER
+
 sudo apt install docker-compose
 ```
 

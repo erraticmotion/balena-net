@@ -6,14 +6,18 @@ Simple Node web server running on the Nuc VM's to test deployment and build.
 
 ```console
 cd ~/src/scratch
+
+# Authenticate using web, use Git login.
 balena login
+
 balena push swarm --source .
+balena push dash --source .
+balena push build --source .
 ```
 
+# IP addresses of the 3 VM's running intel NUCs
 http://192.168.200.140
-
 http://192.168.200.141
-
 http://192.168.200.143
 
 ## Local deployment

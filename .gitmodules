@@ -1,0 +1,6 @@
+[submodule "balena-cli-advanced-masterclass"]
+	path = balena-cli-advanced-masterclass
+	url = https://github.com/balena-io/balena-cli-advanced-masterclass
+[submodule "balena-cli-masterclass"]
+	path = balena-cli-masterclass
+	url = https://github.com/balena-io/balena-cli-masterclass

@@ -1,6 +1,6 @@
 # Balena-Net
 
-See [Intel NUC](INTEL-NUC.md)
+See [Intel Nuc](INTEL_NUC.md)
 
 Install and run the balena CLI on a Ubuntu VM to isolate from Windows host machine. Acts as a integration and build server separate form the underlying operation system.
 

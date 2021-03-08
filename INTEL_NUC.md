@@ -15,14 +15,17 @@ qemu-img --version
 ## Create vmdk
 
 ```console
-qemu-img convert balena-cloud-HUBZ-VM-Sandbox-intel-nuc-2.68.1+rev1-dev-v12.3.0.img -O vmdk balena-cloud-HUBZ-VM-Sandbox-intel-nuc-2.68.1+rev1-dev-v12.3.0.vmdk
+qemu-img convert balena-cloud-HUBZ-VM-intel-nuc-2.68.1+rev1-dev-v12.3.0.img -O vmdk balena-cloud-HUBZ-VM-intel-nuc-2.68.1+rev1-dev-v12.3.0.vmdk
+qemu-img convert balena-cloud-HUBZ-CIRCUS-Sandbox-intel-nuc-2.68.1+rev1-dev-v12.3.0.img -O vmdk balena-cloud-HUBZ-CIRCUS-Sandbox-intel-nuc-2.68.1+rev1-dev-v12.3.0.vmdk
 ```
 
 ```
 setlocal
 set PATH=C:\Program Files (x86)\VMware\VMware Workstation
 
-vmware-vdiskmanager -r balena-cloud-HUBZ-VM-Sandbox-intel-nuc-2.68.1+rev1-dev-v12.3.0.vmdk -t 4 balena-cloud-HUBZ-VM-Sandbox-intel-nuc-2.68.vmdk
+vmware-vdiskmanager -r balena-cloud-HUBZ-VM-intel-nuc-2.68.1+rev1-dev-v12.3.0.vmdk -t 4 balena-cloud-HUBZ-VM-intel-nuc-2.68.vmdk
+-or-
+vmware-vdiskmanager -r balena-cloud-HUBZ-Circus-Sandbox-intel-nuc-2.68.1+rev1-dev-v12.3.0.vmdk -t 4 balena-cloud-HUBZ-CIRCUS-Sandbox-intel-nuc-2.68.vmdk
 ```
 
 ## Import disk as a VM
@@ -37,7 +40,7 @@ vmware-vdiskmanager -r balena-cloud-HUBZ-VM-Sandbox-intel-nuc-2.68.1+rev1-dev-v1
 * LSI Logic.
 * Virtual Disk Type: SATA. Note: It is critical that the original Balena VMDK is set to SATA 0:0 otherwise it will not boot properly. It should be already configured as such, but you can click the Advanced button to double check.
 * Use and existing virtual disk.
-* Existing disk file: Navigate to the `balena-cloud-HUBZ-VM-Sandbox-intel-nuc-2.68.vmdk` (1kb file)
+* Existing disk file: Navigate to the `balena-cloud-HUBZ-VM-intel-nuc-2.68.vmdk` (1kb file)
 * Click finish.
 
 ## Customize VM.
